@@ -1,12 +1,34 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Nazdááááááááááááár</title>
-    </head>
-    <body>
-        <h1>
-            My first Nazdááááááááááááár
-        </h1>
-        <p> this is paragraph...</p>
-    </body>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tlačítko Zobrazit</title>
+    <style>
+        #text {
+            display: none; /* Skryjeme text na začátku */
+            margin-top: 10px;
+            padding: 10px;
+            background-color: lightgray;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <button onclick="zobrazText()">Klikni a zobraz text</button>
+    <div id="text">Ahoj, právě jsi zobrazil tento text!</div>
+
+    <script>
+        function zobrazText() {
+            let textDiv = document.getElementById("text");
+            if (textDiv.style.display === "none") {
+                textDiv.style.display = "block";
+            } else {
+                textDiv.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
 </html>
