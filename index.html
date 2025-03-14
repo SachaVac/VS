@@ -6,11 +6,11 @@
     <title>Zmizení tlačítka s časem</title>
     <style>
         button {
-            padding: 15px 30px;
-            font-size: 20px;
-            background-color: blue;
-            color: white;
-            border: none;
+            padding: 300px 600px;
+            font-size: 500px;
+            background-color: yellow;
+            color: black;
+            border: black;
             border-radius: 10px;
             cursor: pointer;
             transition: transform 0.2s;
@@ -25,14 +25,14 @@
             margin-top: 10px;
             font-size: 18px;
             padding: 10px;
-            background-color: lightgray;
+            background-color: green;
             border-radius: 5px;
         }
     </style>
 </head>
 <body>
 
-    <button id="tlacitko" onclick="zobrazText()">Klikni a zobraz text</button>
+    <button id="tlacitko" onclick="zobrazText()">Rychle Klikni ---> Nu třeba zjistíš víc</button>
     <div id="text"></div>
 
     <script>
@@ -44,7 +44,7 @@
 
             document.getElementById("tlacitko").style.display = "none"; // Skryje tlačítko
             document.getElementById("text").style.display = "block"; // Zobrazí text
-            document.getElementById("text").innerHTML = `Tlačítko zmizelo! Kliknutí trvalo ${elapsedTime} sekund.`;
+            document.getElementById("text").innerHTML = `Jaj, tlačítko zmizelo! No je to teda bída, co si budem ${elapsedTime}. Zdraví tě Venca :)`;
         }
     </script>
 
