@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zmizení tlačítka</title>
+    <title>Zmizení tlačítka s časem</title>
     <style>
         button {
-            padding: 500px 1000px;
-            font-size: 700px;
-            background-color: yellow;
+            padding: 15px 30px;
+            font-size: 20px;
+            background-color: blue;
             color: white;
             border: none;
             border-radius: 10px;
@@ -21,7 +21,7 @@
         }
 
         #text {
-            display: none; /* Na začátku skryté */
+            display: none;
             margin-top: 10px;
             font-size: 18px;
             padding: 10px;
@@ -32,13 +32,19 @@
 </head>
 <body>
 
-    <button id="tlacitko" onclick="zobrazText()">Rychle Klikni, třeba zjistíš víc</button>
-    <div id="text">Ahoj, tlačítko zmizelo, zdraví tě Venca :)</div>
+    <button id="tlacitko" onclick="zobrazText()">Klikni a zobraz text</button>
+    <div id="text"></div>
 
     <script>
+        let startTime = Date.now(); // Uloží čas při načtení stránky
+
         function zobrazText() {
+            let endTime = Date.now(); // Uloží čas při kliknutí
+            let elapsedTime = ((endTime - startTime) / 1000).toFixed(2); // Výpočet v sekundách
+
             document.getElementById("tlacitko").style.display = "none"; // Skryje tlačítko
             document.getElementById("text").style.display = "block"; // Zobrazí text
+            document.getElementById("text").innerHTML = `Tlačítko zmizelo! Kliknutí trvalo ${elapsedTime} sekund.`;
         }
     </script>
 
