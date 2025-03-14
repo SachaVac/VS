@@ -3,36 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tlačítko Zobrazit</title>
+    <title>Zmizení tlačítka</title>
     <style>
+        button {
+            padding: 15px 30px;
+            font-size: 20px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+        }
+
         #text {
-            display: AHOJDA; /* Skryjeme text na začátku */
+            display: none; /* Na začátku skryté */
             margin-top: 10px;
+            font-size: 18px;
             padding: 10px;
             background-color: lightgray;
             border-radius: 5px;
         }
-        button {
-        width: 20000px;
-        height: 6000px;
-        font-size: 20px;
-        }
     </style>
-    
 </head>
 <body>
 
-    <button onclick="zobrazText()">Rychle Klikni ----> dozvis se vic</button>
-    <div id="text">Nazdáááááár od Vency</div>
+    <button id="tlacitko" onclick="zobrazText()">Klikni a zobraz text</button>
+    <div id="text">Ahoj, tlačítko zmizelo a teď vidíš jen tento text!</div>
 
     <script>
         function zobrazText() {
-            let textDiv = document.getElementById("text");
-            if (textDiv.style.display === "none") {
-                textDiv.style.display = "block";
-            } else {
-                textDiv.style.display = "none";
-            }
+            document.getElementById("tlacitko").style.display = "none"; // Skryje tlačítko
+            document.getElementById("text").style.display = "block"; // Zobrazí text
         }
     </script>
 
