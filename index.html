@@ -36,7 +36,7 @@
     <div id="text"></div>
 
     <script>
-        let startTime = Date.now(); // Uloží čas při načtení stránky
+        /*let startTime = Date.now(); // Uloží čas při načtení stránky
 
         function zobrazText() {
             let endTime = Date.now(); // Uloží čas při kliknutí
@@ -45,7 +45,17 @@
             document.getElementById("tlacitko").style.display = "none"; // Skryje tlačítko
             document.getElementById("text").style.display = "block"; // Zobrazí text
             document.getElementById("text").innerHTML = `Jáj, tlačítko zmizelo! No je to teda bída, co si budem, jen ${elapsedTime}s života vyplácáno pro blbost!!! - Zdraví tě Venca :))`;
-        }
+        }*/
+        <script>
+    function zobrazText() {
+        const pismena = ["A", "B", "C", "D", "E"];
+        const nahodnePismeno = pismena[Math.floor(Math.random() * pismena.length)];
+
+        // Přesměrování na stránku vysledek.html s parametrem v URL
+        window.location.href = `vysledek.html?pismeno=${nahodnePismeno}`;
+    }
+</script>
+
     </script>
 
 </body>
