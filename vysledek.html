@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Výsledek</title>
+    <style>
+        body {
+            font-size: 80px;
+            text-align: center;
+            padding-top: 100px;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div id="vysledek"></div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const pismeno = urlParams.get('pismeno');
+
+        document.getElementById("vysledek").textContent = `Tvoje písmeno je: ${pismeno}`;
+    </script>
+</body>
+</html>
